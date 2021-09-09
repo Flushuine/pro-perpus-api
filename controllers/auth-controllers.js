@@ -1,8 +1,11 @@
 import ModelAuth from '../models/auth-schema.js'
 import registerValidate from '../configs/joi_validation.js'
+import bcrypt from 'bcrypt'
 
 //get user data
 const getUsers = async (req, res) => {
+    //validate account logged-in
+        //code here
     try {
         const findUsers = await ModelAuth.find()
         res.json(findUsers)
@@ -36,10 +39,14 @@ const postUsers = async (req, res) => {
         message : "Account with this email is not verified."
     })
 
+    //password hash
+    const salt = await bcrypt.genSalt(10)
+    const passwordHash = await bcrypt.hash(req.body.password, salt)
+
     const data = new ModelAuth({
         name : req.body.name,
         email : req.body.email,
-        password : req.body.password,
+        password : passwordHash,
         active : false,
         role : "user"
     })
