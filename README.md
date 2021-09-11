@@ -25,9 +25,9 @@ You will need a server with:
 ## Setup
 To run this project, install it locally using:
 
-$ cd ../pro-perpus-api
-$ npm install
-$ cp env.example .env
+$ cd ../pro-perpus-api <br>
+$ npm install <br>
+$ cp env.example .env <br>
 
 - After you create a database and inform .env file, run this:
 
