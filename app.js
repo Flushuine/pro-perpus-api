@@ -1,16 +1,20 @@
 import Express from 'express'
-const app = Express()
+const app = Express();
+import Mongoose from 'mongoose'
 import dotenv from 'dotenv'
 dotenv.config()
-import AuthRoutes from './routes/auth-routes.js'
-import Mongoose from 'mongoose'
+import AuthRoutes from './app/routes/auth-routes.js'
+import BookRoutes from './app/routes/book-router.js'
+
+//memparse request content-type - application/x-www-form-urlencoded
+app.use(Express.urlencoded({ extended: true }));
 
 //middleware - untuk menangkap teks dari req.body
 app.use(Express.json())
 
-
 //routes
 app.use('/api/auth/', AuthRoutes)
+app.use('/api/book/', BookRoutes)
 
 //connect database
 const connect = async () => {
