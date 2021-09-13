@@ -1,5 +1,5 @@
 import Express from 'express'
-const app = Express();
+const app = Express()
 import Mongoose from 'mongoose'
 import dotenv from 'dotenv'
 dotenv.config()
