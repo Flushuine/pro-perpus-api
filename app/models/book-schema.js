@@ -6,39 +6,39 @@ const BookSchema = new Mongoose.Schema({
         required: true,
         maxlength: 20
     },
-    book_author: {
+    bookAuthor: {
         type: String,
         required: true
     },
-    book_name: {
+    bookName: {
         type: String,
         required: true
     },
-    book_category: {
+    bookCategory: {
         type: Array,
         required: true
     },
-    book_synopsis: {
+    bookSynopsis: {
         type: String,
         required: true
     },
-    book_release_date: {
+    bookReleaseDate: {
         type: String,
         required: true
     },
-    book_stock: {
+    bookStock: {
         type: Number,
         required: true
     },
-    book_cover: {
+    bookCover: {
         type: String,
         required: false
     },
-    book_rating: {
+    bookRating: {
         type: Number,
         required: true
     },
-    book_publisher: {
+    bookPublisher: {
         type: String,
         required: true
     }
