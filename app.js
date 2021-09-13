@@ -7,7 +7,7 @@ import AuthRoutes from './app/routes/auth-routes.js'
 import BookRoutes from './app/routes/book-router.js'
 
 //memparse request content-type - application/x-www-form-urlencoded
-app.use(Express.urlencoded({ extended: true }));
+//app.use(Express.urlencoded({ extended: true }));
 
 //middleware - untuk menangkap teks dari req.body
 app.use(Express.json())
