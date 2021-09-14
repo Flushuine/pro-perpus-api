@@ -1,4 +1,4 @@
-import Mongoose from "mongoose";
+import Mongoose from "mongoose"
 
 const AuthSchema = new Mongoose.Schema({
     name : {
