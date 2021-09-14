@@ -1,5 +1,5 @@
-import Express from 'express'
-const route = Express.Router()
+import express from 'express'
+const route = express.Router()
 import {getUsers, postUsers, deleteUser} from '../controllers/auth-controllers.js'
 
 

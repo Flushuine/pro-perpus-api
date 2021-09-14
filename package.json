@@ -1,7 +1,7 @@
 {
-  "name": "jwt-auth",
+  "name": "pro-perpus",
   "version": "1.0.0",
-  "description": "learn jwt auth",
+  "description": "online book library",
   "main": "app.js",
   "type": "module",
   "scripts": {
